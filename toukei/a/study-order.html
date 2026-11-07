@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>統計学を独学で学ぶ順番｜記述統計→確率→推定・検定</title>
+<meta name="description" content="統計学を独学で学ぶときの順番を、データの種類、記述統計、確率と確率分布、推定と検定、相関と回帰の流れで解説。計算でつまずかないコツつき。">
+<link rel="canonical" href="https://kappi1023.github.io/shikaku-drill/toukei/a/study-order.html">
+<meta property="og:title" content="統計学を独学で学ぶ順番｜記述統計→確率→推定・検定"><meta property="og:description" content="統計学を独学で学ぶときの順番を、データの種類、記述統計、確率と確率分布、推定と検定、相関と回帰の流れで解説。計算でつまずかないコツつき。"><meta property="og:type" content="website">
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1d1d1f;--sub:#5f6368;--line:#e3e3e0;--accent:#0b6e6e;--ok:#1e7d32;--ng:#b3261e;--okbg:#e8f5e9;--ngbg:#fdecea}
+@media (prefers-color-scheme:dark){:root{--bg:#141415;--card:#1e1f21;--ink:#ececec;--sub:#a0a4a8;--line:#2f3134;--accent:#5cc8c8;--ok:#81c784;--ng:#ef9a9a;--okbg:#1d3320;--ngbg:#3a1f1d}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+a{color:var(--accent)}header,main,footer{max-width:760px;margin:0 auto;padding:0 16px}
+header{padding-top:20px}header .logo{font-weight:700;text-decoration:none;color:var(--ink)}
+nav.crumb{font-size:13px;color:var(--sub);margin:8px 0 0}nav.crumb a{color:var(--sub)}
+h1{font-size:24px;line-height:1.4;margin:20px 0 8px}h2{font-size:19px;margin:32px 0 12px}
+.lead{color:var(--sub)}.pr{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:4px;padding:0 6px;color:var(--sub)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;padding:0;list-style:none}
+.grid a{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;text-decoration:none;color:var(--ink)}
+.grid small{display:block;color:var(--sub)}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+.q h3{font-size:14px;color:var(--sub);margin:0 0 4px;font-weight:600}.q .stem{margin:0 0 12px;font-weight:600}
+.q ol{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.q button{width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer}
+.q button:disabled{cursor:default}.q button.ok{background:var(--okbg);border-color:var(--ok)}.q button.ng{background:var(--ngbg);border-color:var(--ng)}
+.q details{margin-top:12px}.q summary{cursor:pointer;color:var(--accent)}
+.q .exp{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:15px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:24px 0}
+.box ul{margin:8px 0 0;padding-left:20px}.cta{display:inline-block;background:var(--accent);color:#fff;border-radius:8px;padding:10px 16px;text-decoration:none;font-weight:600}
+.pager{display:flex;justify-content:space-between;gap:12px;margin:24px 0}
+#score{position:sticky;top:0;background:var(--bg);padding:8px 0;font-size:14px;color:var(--sub);border-bottom:1px solid var(--line)}
+.article h2{border-left:4px solid var(--accent);padding-left:10px}.article h3{font-size:17px;margin:24px 0 8px}
+.meta{font-size:13px;color:var(--sub)}.alist{padding-left:20px}.alist li{margin:6px 0}
+footer{color:var(--sub);font-size:13px;padding:32px 16px 48px}
+</style>
+</head><body>
+<header><a class="logo" href="/shikaku-drill/">資格の一問一答ドリル</a><nav class="crumb"><a href="/shikaku-drill/">トップ</a> › <a href="/shikaku-drill/toukei/">統計学（データ分析の基礎）</a> › 統計学を独学で学ぶ順番｜記述統計→確率→推定・検定</nav></header>
+<main><p><span class="pr">広告・PR</span> このページには広告リンクを含みます。</p><article class="article"><h1>統計学を独学で学ぶ順番｜記述統計→確率→推定・検定</h1><p class="meta">公開日：<time datetime="2026-11-07">2026/11/07</time></p>
+<p>統計学は、言葉の定義を押さえてから計算に進むと、つまずきにくい分野です。この記事では、データ分析の基礎を独学で学ぶときの順番を整理します。</p>
+
+<h2>ステップ1：データの種類と集め方</h2>
+<p>質的データと量的データの違い、母集団と標本、調査の方法など、統計の前提になる考え方から始めます。ここを飛ばすと、後で「どの手法を使えばいいか」で迷いやすくなります。</p>
+<ul><li><a href="/shikaku-drill/toukei/f01.html">統計学（データ分析の基礎） 一問一答「データの種類と収集」</a></li></ul>
+
+<h2>ステップ2：記述統計とグラフ</h2>
+<p>平均・中央値・最頻値、分散・標準偏差、四分位数と箱ひげ図など、データを要約する方法を学びます。グラフや表から正しく読み取る練習も、この段階でしておきましょう。</p>
+<ul>
+<li><a href="/shikaku-drill/toukei/f02.html">統計学（データ分析の基礎） 一問一答「記述統計（代表値・散らばり）」</a></li>
+<li><a href="/shikaku-drill/toukei/f03.html">統計学（データ分析の基礎） 一問一答「グラフと表の読み取り」</a></li>
+</ul>
+
+<h2>ステップ3：確率と確率分布</h2>
+<p>確率の基本、条件付き確率、二項分布や正規分布などを学びます。公式を覚えるより、サイコロやコインのような身近な例で「なぜそうなるか」を確かめながら進めると理解が深まります。</p>
+<ul>
+<li><a href="/shikaku-drill/toukei/f04.html">統計学（データ分析の基礎） 一問一答「確率」</a></li>
+<li><a href="/shikaku-drill/toukei/f05.html">統計学（データ分析の基礎） 一問一答「確率分布」</a></li>
+</ul>
+
+<h2>ステップ4：推定と検定</h2>
+<p>標本から母集団を推し量る推定と、仮説が正しいかを判断する検定は、統計学の中心です。「何を仮説にして、何と比べて判断するのか」を言葉で説明できるようにしてから計算に入ると、手順を覚えやすくなります。</p>
+<ul>
+<li><a href="/shikaku-drill/toukei/f06.html">統計学（データ分析の基礎） 一問一答「標本分布と推定」</a></li>
+<li><a href="/shikaku-drill/toukei/f07.html">統計学（データ分析の基礎） 一問一答「仮説検定」</a></li>
+</ul>
+
+<h2>ステップ5：相関と回帰</h2>
+<p>2つの変数の関係を調べる相関係数と回帰直線を学びます。「相関があっても因果関係があるとは限らない」という点は、実務でもよく問われる考え方です。</p>
+<ul><li><a href="/shikaku-drill/toukei/f08.html">統計学（データ分析の基礎） 一問一答「相関と回帰」</a></li></ul>
+
+<h2>計算でつまずかないコツ</h2>
+<ul>
+<li>電卓（できれば関数電卓）を使って、実際に手を動かす</li>
+<li>公式は、記号の意味を言葉で書き添えて覚える</li>
+<li>同じ型の問題を数回続けて解き、手順を体で覚える</li>
+</ul>
+<div class="box"><strong>統計学（データ分析の基礎）の学習におすすめ</strong><ul><li><a href="https://rpx.a8.net/svt/ejp?a8mat=4BGFJI+419SDU+2HOM+BW8O1&amp;rakuten=y&amp;a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26110779615_4BGFJI_419SDU_2HOM_BW8O1%3Fpc%3Dhttps%253A%252F%252Fsearch.rakuten.co.jp%252Fsearch%252Fmall%252F%2525E7%2525B5%2525B1%2525E8%2525A8%252588%2525E5%2525AD%2525A6%252520%2525E5%252585%2525A5%2525E9%252596%252580%252F200162%252F%26m%3Dhttps%253A%252F%252Fsearch.rakuten.co.jp%252Fsearch%252Fmall%252F%2525E7%2525B5%2525B1%2525E8%2525A8%252588%2525E5%2525AD%2525A6%252520%2525E5%252585%2525A5%2525E9%252596%252580%252F200162%252F" rel="sponsored nofollow noopener" target="_blank">楽天市場で統計学の入門書を探す</a><br><small>テキスト・問題集・参考書の一覧（楽天市場）</small></li></ul></div>
+</article></main>
+<footer>
+<p>問題はすべて、各試験の出題範囲と公開されている法令・資料をもとに作った自作問題です。公式の過去問題ではなく、試験実施団体とは関係ありません。法令は作成時点のものです。最新の情報は各試験の公式サイトで確認してください。</p>
+<p>当サイトはアフィリエイトプログラムに参加しており、紹介した商品・サービスの購入や申込みにより報酬を受け取ることがあります。</p>
+<p>© 2026 kaya araki</p>
+</footer>
+<script>
+document.querySelectorAll('.q').forEach(function(q){
+  var ans=+q.dataset.a;
+  q.querySelectorAll('button').forEach(function(b,i){
+    b.addEventListener('click',function(){
+      if(q.dataset.done)return;q.dataset.done=1;
+      q.querySelectorAll('button').forEach(function(x,j){x.disabled=true;if(j===ans)x.classList.add('ok');});
+      if(i!==ans)b.classList.add('ng');else{window.__ok=(window.__ok||0)+1;}
+      window.__n=(window.__n||0)+1;
+      var s=document.getElementById('score');if(s)s.textContent='解答 '+window.__n+'問 ／ 正解 '+(window.__ok||0)+'問';
+      q.querySelector('details').open=true;
+    });
+  });
+});
+</script>
+</body></html>
